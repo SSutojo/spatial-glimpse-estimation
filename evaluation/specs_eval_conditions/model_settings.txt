@@ -1,0 +1,31 @@
+model_settings_PlotPart2
+%
+nr modType labelType modRange      context nLayersH sizeLayersH azmLwin pitchLwin powLwin azmWinType pitchWinType powWinType  dropoutH bBatchNorm batchSize lossFunc globFeats 	                  contourMethod   MixTypes    NoiseType     Size    Rooms                   SV_types                    %                 
+01 dnn     soft      broadband_sep [2,2]   2        800         20      30        30      rect       rect         rect        0.2      true       128       pow      reliable_peak_azm,direct     DilationErosion 2sp,3sp,4sp Low,Same,High large   anechoic                normalized_ac,mean_max;normalized_ac,pearsons_corr;log_power,abs_diff;log_power,abs_sum;azimuth_probabilities,pearsons_corr  %
+02 none    []        []            []      []       []          20      30        30      rect       rect         rect        []       []         []        []       reliable_peak_azm,direct     DilationErosion []          []            []      []                      azimuth_probabilities,pearsons_corr  %
+%
+var_names
+=
+local_params.model_confs.model_type
+local_params.model_confs.label_type
+local_params.model_confs.model_range
+local_params.model_confs.post.context.context
+local_params.model_confs.network.architecture.nLayersHidden
+local_params.model_confs.network.architecture.sizeLayersHidden
+feature_params.azm_Lwin
+feature_params.pitch_Lwin
+feature_params.pow_Lwin
+feature_params.azm_wintype
+feature_params.pitch_wintype
+feature_params.pow_wintype
+local_params.model_confs.network.regularization.dropoutHidden
+local_params.model_confs.network.regularization.bBatchNorm
+local_params.model_confs.network.training.batchSize
+local_params.model_confs.network.training.lossFunction
+global_params.feature_types
+local_params.contour_method
+local_params.model_confs.training_data.MixTypes
+local_params.model_confs.training_data.NoiseType
+local_params.model_confs.training_data.Size
+local_params.model_confs.training_data.Rooms
+local_params.SV_types
